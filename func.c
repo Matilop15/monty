@@ -19,3 +19,17 @@ void pall(stack_t **stack, unsigned int line_number)
 		recorre = recorre->next;
 	}
 }
+/**
+ * push - push a integer to stack
+ * @stack: pointer to stack
+ * @line_number: line number of code
+ */
+void m_push(stack_t **stack, unsigned int line_number)
+{
+	char *arg;
+	int n;
+
+	arg = strtok(NULL, "\n \t");
+	if (arg == NULL)
+	{
+		dprintf(STDOUT_FILENO, 
