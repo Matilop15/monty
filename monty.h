@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <stdarg.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -50,7 +51,7 @@ stack_t *add_dnodeint_end(stack_t **head, const int n);
 stack_t *add_dnodeint(stack_t **head, const int n);
 void free_dlistint(void);
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
-void error_salida(unsigned int error_code, ...);
 int isnumber(char *str);
+void error_salida(unsigned int error_code, ...);
 
 #endif
