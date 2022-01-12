@@ -24,7 +24,7 @@ void pall(stack_t **stack, unsigned int line_number)
  * @stack: pointer to stack
  * @line_number: line number of code
  */
-void m_push(stack_t **stack, unsigned int line_number)
+void push(stack_t **stack, unsigned int line_number)
 {
 	char *arg;
 	int n;

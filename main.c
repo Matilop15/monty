@@ -13,9 +13,9 @@ int main(int argc, char **argv)
 	if (argc != 2)
 	{
 		printf("USAGE: monty file\n");
-		exit_type(&stack);
+		error_salida(1);
 	}
-	lec_file(av[1], &stack);
+	lec_file(argv[1], &stack);
 	free_dlistint(stack);
 	return (0);
 }
