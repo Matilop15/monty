@@ -30,6 +30,6 @@ void error_salida(unsigned int error_code, ...)
 		default:
 			break;
 	}
-	free_dlistint();
+	free_node();
 	exit(EXIT_FAILURE);
 }

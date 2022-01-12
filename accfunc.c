@@ -7,8 +7,7 @@
  */
 void lec_file(char *filename, stack_t **stack)
 {
-	char *buffer = NULL;
-	char *line;
+	char *buffer = NULL, *line;
 	size_t i = 0;
 	unsigned int line_count = 1;
 	instruct_func s;

@@ -19,15 +19,14 @@ stack_t *new_node(int n)
 }
 
 /**
- * free_dlistint - Free a list.
- * @head: Pointer to first node.
+ * free_node - Free a list.
  *
  */
-void free_dlistint(void)
+void free_node(void)
 {
 	stack_t *tmp;
 
-	if(head == NULL)
+	if (head == NULL)
 		return;
 
 	while (head != NULL)

@@ -29,6 +29,7 @@ void push(stack_t **stack, unsigned int line_number)
 	stack_t *new;
 	char *arg;
 	int push_arg;
+	(void) line_number;
 
 	push_arg = 0;
 	new = malloc(sizeof(stack_t));
@@ -42,4 +43,34 @@ void push(stack_t **stack, unsigned int line_number)
 	}
 	else
 		error_salida(3, &stack);
+
+	new_node(push_arg);
 }
+
+/**
+ * isnumber - checks if a string is a number
+ * @str: string being passed
+ *
+ * Return: returns 1 if string is a number, 0 otherwise
+ */
+int isnumber(char *str)
+{
+	unsigned int i;
+
+	if (str == NULL)
+		return (0);
+	i = 0;
+	while (str[i])
+	{
+		if (str[0] == '-')
+		{
+			i++;
+			continue;
+		}
+		if (!isdigit(str[i]))
+			return (0);
+		i++;
+	}
+	return (1);
+}
+

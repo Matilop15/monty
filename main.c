@@ -1,4 +1,5 @@
 #include "monty.h"
+stack_t *head = NULL;
 
 /**
  * main - Entry 2 the program.
@@ -16,6 +17,6 @@ int main(int argc, char **argv)
 		error_salida(1);
 	}
 	lec_file(argv[1], &stack);
-	free_dlistint(stack);
+	free_node();
 	return (0);
 }
