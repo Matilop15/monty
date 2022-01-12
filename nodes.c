@@ -2,20 +2,33 @@
 
 /**
  * new_node - create a new node.
+ * @head: pointer to
  * @n: Number to ho inside the node.
  * Return: On succes point to a node otherwise NULL.
  */
-stack_t *new_node(int n)
+stack_t *new_node(stack_t **head, const int n)
 {
-	stack_t *node;
+	stack_t *new;
 
-	node = malloc(sizeof(stack_t));
-	if (node == NULL)
+	new = malloc(sizeof(stack_t));
+	if (new == NULL)
 		return (NULL);
-	node->next = NULL;
-	node->prev = NULL;
-	node->n = n;
-	return (node);
+
+	if (*head == NULL)
+	{
+		new->n = n;
+		new->next = NULL;
+		new->prev = NULL;
+		*head = new;
+		return (*head);
+	}
+
+	(*head)->prev = new;
+	new->n = n;
+	new->next = *head;
+	new->prev = NULL;
+	*head = new;
+	return (*head);
 }
 
 /**

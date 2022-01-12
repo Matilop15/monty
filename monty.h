@@ -20,12 +20,10 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
-
-
 
 /**
  * struct instruction_s - opcode and its function
@@ -37,15 +35,14 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
 
 extern stack_t *head;
 
 int isnumber(char *str);
-ssize_t getline(char **lineptr, size_t *n, FILE * stream);
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 int main(int argc, char **argv);
 void lec_file(char *filename, stack_t **stack);
 void pall(stack_t **stack, unsigned int line_number);
@@ -53,10 +50,9 @@ void push(stack_t **stack, unsigned int line_number);
 typedef void (*instruct_func)(stack_t **stack, unsigned int line_number);
 char *parse_line(char *line);
 instruct_func get_op_func(char *str);
-stack_t *new_node(int n);
+stack_t *new_node(stack_t **head, const int n);
 void free_node(void);
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 int isnumber(char *str);
 void error_salida(unsigned int error_code, ...);
-
 #endif

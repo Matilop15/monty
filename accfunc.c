@@ -11,7 +11,7 @@ void lec_file(char *filename, stack_t **stack)
 	size_t i = 0;
 	unsigned int line_count = 1;
 	instruct_func s;
-	int read;
+	int read, check;
 	FILE *file = fopen(filename, "r");
 
 	if (file == NULL)
@@ -27,12 +27,15 @@ void lec_file(char *filename, stack_t **stack)
 		}
 		s = get_op_func(line);
 		if (s == NULL)
-			error_salida(3, *stack);
+			error_salida(3);
 
 		s(stack, line_count);
 		line_count++;
 	}
 	free(buffer);
+	check = fclose(file);
+	if (check == -1)
+		exit(-1);
 }
 /**
  * get_op_func -  checks opcode and returns the correct function
@@ -55,7 +58,6 @@ instruct_func get_op_func(char *str)
 	{
 		i++;
 	}
-
 	return (instruct[i].f);
 }
 /**

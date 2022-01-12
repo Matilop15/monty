@@ -8,12 +8,15 @@
 void pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *recorre;
-
 	(void) line_number;
+
 	if (stack == NULL)
+	{
 		exit(EXIT_FAILURE);
+	}
+
 	recorre = *stack;
-	while (recorre != NULL)
+	while (recorre)
 	{
 		printf("%d\n", recorre->n);
 		recorre = recorre->next;
@@ -28,10 +31,9 @@ void push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new;
 	char *arg;
-	int push_arg;
+	int push_arg = 0;
 	(void) line_number;
 
-	push_arg = 0;
 	new = malloc(sizeof(stack_t));
 	if (!new)
 		error_salida(4, *stack);
@@ -44,7 +46,7 @@ void push(stack_t **stack, unsigned int line_number)
 	else
 		error_salida(3, &stack);
 
-	new_node(push_arg);
+	new_node(stack, push_arg);
 }
 
 /**
@@ -73,4 +75,3 @@ int isnumber(char *str)
 	}
 	return (1);
 }
-
