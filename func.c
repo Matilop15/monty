@@ -26,10 +26,20 @@ void pall(stack_t **stack, unsigned int line_number)
  */
 void push(stack_t **stack, unsigned int line_number)
 {
+	stack_t *new;
 	char *arg;
-	int n;
+	int push_arg;
 
-	arg = strtok(NULL, "\n \t");
-	if (arg == NULL)
+	push_arg = 0;
+	new = malloc(sizeof(stack_t));
+	if (!new)
+		error_salida(4, *stack);
+
+	arg = strtok(NULL, "\n ");
+	if (isnumber(arg) == 1 && arg != NULL)
 	{
-		dprintf(STDOUT_FILENO, 
+		push_arg = atoi(arg);
+	}
+	else
+		error_salida(3, &stack);
+}

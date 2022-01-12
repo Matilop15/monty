@@ -23,14 +23,17 @@ stack_t *new_node(int n)
  * @head: Pointer to first node.
  *
  */
-void free_dlistint(stack_t *head)
+void free_dlistint(void)
 {
 	stack_t *tmp;
 
+	if(head == NULL)
+		return;
+
 	while (head != NULL)
 	{
-		tmp = head->next;
-		free(head);
-		head = tmp;
+		tmp = head;
+		head = head->next;
+		free(tmp);
 	}
 }
