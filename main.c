@@ -15,6 +15,5 @@ int main(int argc, char **argv)
 		error_salida(1);
 	lec_file(argv[1], &stack);
 	free_node();
-	printf("funciono");
 	return (0);
 }

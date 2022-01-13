@@ -41,8 +41,6 @@ void free_node(void)
 {
 	stack_t *tmp;
 
-	printf("frree\n");
-
 	if (head == NULL)
 		return;
 
