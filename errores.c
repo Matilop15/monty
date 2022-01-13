@@ -28,6 +28,10 @@ void error_salida(unsigned int error_code, ...)
 		case 4:
 			fprintf(stderr, "Error: malloc failed\n");
 			break;
+		case 6:
+			fprintf(stderr, "L%u: can't pint, stack empty\n",
+					va_arg(ag, unsigned int));
+			break;
 		default:
 			break;
 	}

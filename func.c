@@ -23,9 +23,9 @@ void pall(stack_t **stack, unsigned int line_number)
 	}
 }
 /**
- * push - push a integer to stack
- * @stack: pointer to stack
- * @line_number: line number of code
+ * push - Push a integer 2 stack.
+ * @stack: Pointer 2 stack.
+ * @line_number: Line number of code.
  */
 void push(stack_t **stack, unsigned int line_number)
 {
@@ -48,7 +48,18 @@ void push(stack_t **stack, unsigned int line_number)
 
 	new_node(stack, push_arg);
 }
+/**
+ * pint - Prints the top node of the stack.
+ * @stack: Pointer to a pointer pointing to top node of the stack.
+ * @line_number: Interger representing the line number of of the opcode.
+ */
+void pint(stack_t **stack, unsigned int line_number)
+{
+	if (stack == NULL || *stack == NULL)
+		error_salida(6, line_number);
 
+	printf("%d\n", (*stack)->n);
+}
 /**
  * isnumber - checks if a string is a number
  * @str: string being passed
