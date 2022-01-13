@@ -2,14 +2,14 @@
 
 /**
  * srch_func - Finds for the function to be executed
- * @op_code: The operation code, It could be push, pall, ...
+ * @opcode: The operation code, It could be push, pall, ...
  * @cmd: The possible value for the operation.
  * @n_line: Line number for the opcode.
  * @format: Format specifier:
  * If the value is 0 --> Stack
  * If the value is 1 --> Queue
  */
-void srch_func(char *op_code, char *cmd, int n_line, int format)
+void srch_func(char *opcode, char *cmd, int n_line, int format)
 {
 	int i;
 	int error;
@@ -22,24 +22,22 @@ void srch_func(char *op_code, char *cmd, int n_line, int format)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
-		{"sub", sub},
-		{"div", divide},
 		{NULL, NULL}
 	};
-	if (op_code[0] == '#')
+	if (opcode[0] == '#')
 		return;
 
 	for (error = 1, i = 0; functions[i].opcode != NULL; i++)
 	{
-		if (strcmp(op_code, functions[i].opcode) == 0)
+		if (strcmp(opcode, functions[i].opcode) == 0)
 		{
-			find_func(functions[i].f, op_code, cmd, n_line, format);
+			find_func(functions[i].f, opcode, cmd, n_line, format);
 			error = 0;
 		}
 	}
 	if (error == 1)
 	{
-		error_salida(3, n_line, op_code);
+		error_salida(3, n_line, opcode);
 	}
 }
 
