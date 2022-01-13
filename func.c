@@ -32,7 +32,6 @@ void push(stack_t **stack, unsigned int line_number)
 	stack_t *new;
 	char *arg;
 	int push_arg = 0;
-	(void) line_number;
 
 	new = malloc(sizeof(stack_t));
 	if (!new)
@@ -44,7 +43,7 @@ void push(stack_t **stack, unsigned int line_number)
 		push_arg = atoi(arg);
 	}
 	else
-		error_salida(3, stack);
+		error_salida(5, line_number);
 
 	new_node(stack, push_arg);
 }

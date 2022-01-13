@@ -28,6 +28,9 @@ void error_salida(unsigned int error_code, ...)
 		case 4:
 			fprintf(stderr, "Error: malloc failed\n");
 			break;
+		case 5:
+			fprintf(stderr, "L%u: usage: push integer\n", va_arg(ag, unsigned int));
+			break;
 		default:
 			break;
 	}
