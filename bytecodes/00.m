@@ -1,3 +1,3 @@
 push 23
-push 32a
+push 4
 pall

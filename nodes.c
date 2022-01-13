@@ -20,7 +20,6 @@ stack_t *new_node(stack_t **head, const int n)
 		new->next = NULL;
 		new->prev = NULL;
 		*head = new;
-		free(new);
 		return (*head);
 	}
 
@@ -29,7 +28,6 @@ stack_t *new_node(stack_t **head, const int n)
 	new->next = *head;
 	new->prev = NULL;
 	*head = new;
-	free(new);
 	return (*head);
 }
 
