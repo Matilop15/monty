@@ -58,7 +58,7 @@ void error_salida(unsigned int error_code, ...);
 void error_salida2(unsigned int error_code, ...);
 void add(stack_t **stack, unsigned int n_line);
 void sub(stack_t **stack, unsigned int n_line);
-void divide(stack_t **stack, unsigned int n_line);
+void divi(stack_t **stack, unsigned int n_line);
 void op_file(char *file_name);
 void r_file(FILE *fd);
 int int_line(char *string, int n_line, int format);

@@ -22,6 +22,8 @@ void srch_func(char *opcode, char *cmd, int n_line, int format)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
+		{"div", divi},
 		{NULL, NULL}
 	};
 	if (opcode[0] == '#')
