@@ -1,8 +1,8 @@
 #include "monty.h"
 
 /**
- * new_node - create a new node.
- * @n: Number to ho inside the node.
+ * new_node - Create a new node.
+ * @n: Number to host inside the node.
  * Return: On succes point to a node otherwise NULL.
  */
 stack_t *new_node(int n)
@@ -19,7 +19,6 @@ stack_t *new_node(int n)
 }
 /**
  * free_node - Free a list.
- *
  */
 void free_node(void)
 {

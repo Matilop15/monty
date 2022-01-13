@@ -39,8 +39,8 @@ void error_salida(unsigned int error_code, ...)
 }
 
 /**
- * error_salida2 - handles errors.
- * @error_code: The error codes are the following:
+ * error_salida2 - Handles errors.
+ * @error_code: The error codes are the following.
  */
 void error_salida2(unsigned int error_code, ...)
 {

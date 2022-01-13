@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * swap - Swap element 1 for element 2 of the stack
- * @stack: points to the top node of the stack.
- * @n_line: opcode line number.
+ * swap - Swap element 1 for element 2 of the stack.
+ * @stack: Points to the top node of the stack.
+ * @n_line: Opcode line number.
  */
 void swap(stack_t **stack, unsigned int n_line)
 {
@@ -80,9 +80,9 @@ void divi(stack_t **stack, unsigned int n_line)
 	(*stack)->prev = NULL;
 }
 /**
- * nop - does nothing
- * @stack: top of the stack
- * @n_line: current line number
+ * nop - Does nothing.
+ * @stack: Top of the stack.
+ * @n_line: Current line number.
  */
 void nop(stack_t **stack, unsigned int n_line)
 {

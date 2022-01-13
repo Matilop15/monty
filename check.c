@@ -1,13 +1,11 @@
 #include "monty.h"
 
 /**
- * srch_func - Finds for the function to be executed
- * @opcode: The operation code, It could be push, pall, ...
- * @cmd: The possible value for the operation.
- * @n_line: Line number for the opcode.
- * @format: Format specifier:
- * If the value is 0 --> Stack
- * If the value is 1 --> Queue
+ * srch_func - Finds the function to be executed.
+ * @opcode: Operation code.
+ * @cmd: Possible value 4 the operation.
+ * @n_line: Line number 4 the opcode.
+ * @format: Format specifier should be 0 for Stack or 1 for Queue.
  */
 void srch_func(char *opcode, char *cmd, int n_line, int format)
 {
@@ -44,13 +42,12 @@ void srch_func(char *opcode, char *cmd, int n_line, int format)
 }
 
 /**
- * find_func - Calls the required function.
- * @f: Pointer to the function that is about to be called.
- * @op_code: string representing the opcode.
- * @cmd: string representing a numeric value.
- * @n_line: line numeber for the instruction.
- * @format: Format specifier. If 0 Nodes will be entered as a stack.
- * if 1 nodes will be entered as a queue.
+ * find_func - Finds the required function.
+ * @f: Pointer to the function to be called.
+ * @op_code: String representing the opcode.
+ * @cmd: String representing a numeric value.
+ * @n_line: Line number 4 the instruction.
+ * @format: Format specifier.
  */
 void find_func(op_func f, char *op_code, char *cmd, int n_line, int format)
 {
@@ -61,13 +58,12 @@ void find_func(op_func f, char *op_code, char *cmd, int n_line, int format)
 	error = 1;
 	if (strcmp(op_code, "push") == 0)
 	{
-		/*Checks if the number is negative and moves the val ptr*/
 		if (cmd != NULL && cmd[0] == '-')
 		{
 			cmd = cmd + 1;
 			error = -1;
 		}
-		/*val is not a digit is the return value is 0*/
+
 		if (cmd == NULL)
 		{
 			error_salida(5, n_line);
@@ -83,7 +79,6 @@ void find_func(op_func f, char *op_code, char *cmd, int n_line, int format)
 
 		}
 
-		/*Create new node*/
 		node = new_node(atoi(cmd) * error);
 		if (format == 0)
 			f(&node, n_line);
