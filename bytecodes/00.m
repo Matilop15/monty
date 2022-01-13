@@ -1,4 +1,3 @@
-push pushsd
-push 2
-push 3
+push 23a
+push 0
 pall

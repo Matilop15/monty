@@ -12,10 +12,7 @@ int main(int argc, char **argv)
 	stack_t *stack = NULL;
 
 	if (argc != 2)
-	{
-		printf("USAGE: monty file\n");
 		error_salida(1);
-	}
 	lec_file(argv[1], &stack);
 	free_node();
 	return (0);
