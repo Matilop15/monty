@@ -1,13 +1,7 @@
 #include "monty.h"
 /**
-<<<<<<< HEAD
- * lec_file - Read file and execute commands.
- * @filename: Pathname 2 file.
- * @stack: Point 2 head of the stack.
-=======
- * op_file - Open a file.
+ * op_file - Open file.
  * @file_name: String with the name of the file.
->>>>>>> ebce4eb72cca198902739f44a4dcc0f514835acb
  */
 void op_file(char *file_name)
 {
@@ -28,14 +22,8 @@ void op_file(char *file_name)
 	fclose(fd);
 }
 /**
-<<<<<<< HEAD
- * get_op_func - Checks opcode and returns the correct func.
- * @str: opcode
- * Return: In suucces returns a function or NULL in failure.
-=======
- * r_file - Read the content
- * @fd: Pointer to a file descriptor
->>>>>>> ebce4eb72cca198902739f44a4dcc0f514835acb
+ * r_file - Read the content.
+ * @fd: Pointer 2 a file descriptor
  */
 void r_file(FILE *fd)
 {
@@ -54,19 +42,11 @@ void r_file(FILE *fd)
 	free(buffer);
 }
 /**
-<<<<<<< HEAD
- * parse_line - Parses a line for an opcode and arguments.
- * @line: Line to be parsed
- * Return: Returns the opcode in success or null in failure.
-=======
- * int_line - interpret each line by separating it one by one
- * @string: String on the line to be read
- * @n_line: line number for the opcode.
- * @format: Format specifier:
- * If the value is 0 --> Stack
- * If the value is 1 --> Queue
- * Return: Returns 0 if the opcode is stack. 1 if queue.
->>>>>>> ebce4eb72cca198902739f44a4dcc0f514835acb
+ * int_line - Interpret each line by separating it one by one.
+ * @string: String on the line 2 be read.
+ * @n_line: Line number 4 the opcode.
+ * @format: Format specifier is 0 for Stack 1 for Queue
+ * Return: Returns 0 if the opcode is stack or 1 if Queue.
  */
 int int_line(char *string, int n_line, int format)
 {
