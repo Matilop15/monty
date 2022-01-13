@@ -15,7 +15,7 @@ void lec_file(char *filename, stack_t **stack)
 	FILE *file = fopen(filename, "r");
 
 	if (file == NULL)
-		error_salida(2, *stack);
+		error_salida(2, filename, *stack);
 
 	while ((read = getline(&buffer, &i, file)) != -1)
 	{
@@ -28,8 +28,7 @@ void lec_file(char *filename, stack_t **stack)
 		s = get_op_func(line);
 		if (s == NULL)
 		{
-			printf("error 3\n");
-			error_salida(3);
+			error_salida(3, line_count, line);
 		}
 
 		s(stack, line_count);

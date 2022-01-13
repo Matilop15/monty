@@ -8,9 +8,9 @@ void error_salida(unsigned int error_code, ...)
 	va_list ag;
 	char *error_opcode;
 	unsigned int line_count;
-	
-	printf("error\n");
+
 	va_start(ag, error_code);
+	
 	switch (error_code)
 	{
 		case 1:
