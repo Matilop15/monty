@@ -46,6 +46,7 @@ void push(stack_t **stack, unsigned int line_number)
 		error_salida(5, line_number);
 
 	new_node(stack, push_arg);
+	free(new);
 }
 /**
  * pint - Prints the top node of the stack.

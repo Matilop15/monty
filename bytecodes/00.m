@@ -1,3 +1,3 @@
-push 23a
-push 0
+push 23
+push 32a
 pall
