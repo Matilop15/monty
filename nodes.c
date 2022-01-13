@@ -2,35 +2,21 @@
 
 /**
  * new_node - create a new node.
- * @head: pointer to
  * @n: Number to ho inside the node.
  * Return: On succes point to a node otherwise NULL.
  */
-stack_t *new_node(stack_t **head, const int n)
+stack_t *new_node(int n)
 {
 	stack_t *new;
 
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
-		return (NULL);
-
-	if (*head == NULL)
-	{
-		new->n = n;
-		new->next = NULL;
-		new->prev = NULL;
-		*head = new;
-		return (*head);
-	}
-
-	(*head)->prev = new;
-	new->n = n;
-	new->next = *head;
+		error_salida(4);
+	new->next = NULL;
 	new->prev = NULL;
-	*head = new;
-	return (*head);
+	new->n = n;
+	return (new);
 }
-
 /**
  * free_node - Free a list.
  *
