@@ -44,7 +44,7 @@ void push(stack_t **stack, unsigned int line_number)
 		push_arg = atoi(arg);
 	}
 	else
-		error_salida(3, &stack);
+		error_salida(3, stack);
 
 	new_node(stack, push_arg);
 }
