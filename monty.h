@@ -41,18 +41,28 @@ typedef struct instruction_s
 
 extern stack_t *head;
 
-int isnumber(char *str);
+typedef void (*op_func)(stack_t **, unsigned int);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
-int main(int argc, char **argv);
-void lec_file(char *filename, stack_t **stack);
-void pall(stack_t **stack, unsigned int line_number);
-void push(stack_t **stack, unsigned int line_number);
-typedef void (*instruct_func)(stack_t **stack, unsigned int line_number);
-char *parse_line(char *line);
-instruct_func get_op_func(char *str);
-stack_t *new_node(stack_t **head, const int n);
+
+stack_t *new_node(int n);
 void free_node(void);
-int delete_dnodeint_at_index(stack_t **head, unsigned int index);
-int isnumber(char *str);
+void pall(stack_t **, unsigned int);
+void push(stack_t **, unsigned int);
+void add_queue(stack_t **, unsigned int);
+void pint(stack_t **, unsigned int);
+void pop(stack_t **, unsigned int);
+void nop(stack_t **stack, unsigned int n_line);
+void swap(stack_t **stack, unsigned int n_line);
+
 void error_salida(unsigned int error_code, ...);
+void error_salida2(unsigned int error_code, ...);
+void add(stack_t **stack, unsigned int n_line);
+void sub(stack_t **stack, unsigned int n_line);
+void divide(stack_t **stack, unsigned int n_line);
+void op_file(char *file_name);
+void r_file(FILE *fd);
+int int_line(char *string, int n_line, int format);
+void srch_func(char *op_code, char *cmd, int n_line, int format);
+void find_func(op_func, char *op_code, char *cmd, int n_line, int format);
+
 #endif
