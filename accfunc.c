@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * lec_file - read file and execute commands
- * @filename: pathname to file
- * @stack: pointer a la parte superior del stack (pila(
+ * lec_file - Read file and execute commands.
+ * @filename: Pathname 2 file.
+ * @stack: Point 2 head of the stack.
  */
 void lec_file(char *filename, stack_t **stack)
 {
@@ -42,10 +42,9 @@ void lec_file(char *filename, stack_t **stack)
 		exit(-1);
 }
 /**
- * get_op_func -  checks opcode and returns the correct function
- * @str: the opcode
- *
- * Return: returns a function, or NULL on failure
+ * get_op_func - Checks opcode and returns the correct func.
+ * @str: opcode
+ * Return: In suucces returns a function or NULL in failure.
  */
 instruct_func get_op_func(char *str)
 {
@@ -65,10 +64,9 @@ instruct_func get_op_func(char *str)
 	return (instruct[i].f);
 }
 /**
- * parse_line - parses a line for an opcode and arguments
- * @line: the line to be parsed
- *
- * Return: returns the opcode or null on failure
+ * parse_line - Parses a line for an opcode and arguments.
+ * @line: Line to be parsed
+ * Return: Returns the opcode in success or null in failure.
  */
 char *parse_line(char *line)
 {
