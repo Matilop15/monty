@@ -1,4 +1,4 @@
-# Monty Interpreter
+# Montyx Interpreter
 
 A language interpreter made in the C programming language to manage stacks and queues (LIFO and FIFO). The aim is to interpret Monty bytecodes files. [Monty](http://montyscoconut.github.io/) is a language that aims to close the gap between scripting and programming languages.
 
@@ -239,9 +239,9 @@ root@985e10084b49:~/monty#
 
 ```
 
-## Some Brainfuck Tasks
+## Some Brainf\*ck Tasks
 
-[Brainfuck](https://en.wikipedia.org/wiki/Brainfuck) is an esoteric programming language created in 1993 by Urban Müller. Here are some testing scripts.
+[Brainfck](https://en.wikipedia.org/wiki/Brainfuck) is an esoteric programming language created in 1993 by Urban Müller. Here are some testing scripts.
 
 ## Print Holberton
 
@@ -259,5 +259,6 @@ root@985e10084b49:~/monty/bf# bf 1001-add.bf
 ```
 
 ##Authors
-Matias Lopez - [Linkedin](https://www.linkedin.com/in/matias-l%C3%B3pez-777796194/)
-Oscar Bedat - [Linkedin](https://www.linkedin.com/in/oscarbedat/)
+
+[Matias Lopez](https://www.linkedin.com/in/matias-l%C3%B3pez-777796194/)
+[Oscar Bedat](https://www.linkedin.com/in/oscarbedat/)
