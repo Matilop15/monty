@@ -9,7 +9,7 @@ void mult(stack_t **stack, unsigned int n_line)
 	int sum;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		error_salida2(8, n_line, "add");
+		error_salida2(8, n_line, "mul");
 
 	(*stack) = (*stack)->next;
 	sum = (*stack)->n * (*stack)->prev->n;
