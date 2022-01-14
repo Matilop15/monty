@@ -250,7 +250,7 @@ Write a Brainf\*ck script that prints Holberton, followed by a new line.
 * All your Brainf\*ck files should be stored inside the bf sub directory
 * You can install the bf interpreter to test your code: `sudo apt-get install bf`
 
-**Source:** [1000-school.bf](google.com)
+**Source:** [1000-school.bf](https://github.com/Matilop15/monty/blob/main/bf/1000-school.bf)
 
 ```
 root@985e10084b49:~/monty/bf# bf 1000-school.bf
