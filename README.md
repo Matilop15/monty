@@ -7,7 +7,7 @@ A language interpreter made in the C programming language to manage stacks and q
 To compile this project, you can use the following command:
 
 ```
-$ make
+gcc -Wall -Werror -Wextra -pedantic -std=c90 *.c -o monty
 ```
 
 # Option Codes
@@ -257,3 +257,7 @@ root@985e10084b49:~/monty/bf# bf 1000-school.bf
 School
 root@985e10084b49:~/monty/bf# bf 1001-add.bf
 ```
+
+##Authors
+Matias Lopez - [Linkedin](https://www.linkedin.com/in/matias-l%C3%B3pez-777796194/)
+Oscar Bedat - [Linkedin](https://www.linkedin.com/in/oscarbedat/)
