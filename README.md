@@ -1,5 +1,7 @@
 # Monty Project 
 
+![image](https://github.com/Matilop15/monty/blob/main/img/monty.jpg)
+
 Stacks, Queues - LIFO, FIFO, January 2022
 
 # Description
