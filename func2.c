@@ -73,6 +73,11 @@ void divi(stack_t **stack, unsigned int n_line)
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		error_salida2(8, n_line, "div");
 
+	if ((*stack)->n == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", n_line);
+		exit(EXIT_FAILURE);
+	}
 	(*stack) = (*stack)->next;
 	div = (*stack)->n / (*stack)->prev->n;
 	(*stack)->n = div;
