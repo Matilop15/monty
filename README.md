@@ -260,5 +260,4 @@ root@985e10084b49:~/monty/bf# bf 1001-add.bf
 
 <!-- AUTHORS -->
 ## Authors
-[Matias Lopez](https://www.linkedin.com/in/matias-l%C3%B3pez-777796194/)
-[Oscar Bedat](https://www.linkedin.com/in/oscarbedat/)
+[Matias Lopez](https://www.linkedin.com/in/matias-l%C3%B3pez-777796194/) & [Oscar Bedat](https://www.linkedin.com/in/oscarbedat/)
