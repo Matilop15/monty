@@ -13,7 +13,7 @@ void mult(stack_t **stack, unsigned int n_line)
 
 	(*stack) = (*stack)->next;
 	sum = (*stack)->n * (*stack)->prev->n;
-	(*stack)->n = sum;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
+	(*stack)->n = sum;
 }
